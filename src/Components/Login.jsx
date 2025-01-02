@@ -29,17 +29,6 @@ const Login = () => {
     async function login(email, password) {
       setLoading(true);
       try {
-          // Check if the user already has an active session
-          // const currentSession = await account.getSession('current');
-          
-          // if (currentSession) {
-          //     console.log('User is already logged in');
-          //     // Optionally, you can navigate to the homepage or another page if already logged in
-          //     navigate('/');
-          //     alert('You are already logged in');
-          //     return;
-          // }
-          
           // Create a new session if no active session exists
           await account.createEmailPasswordSession(email, password)
           const user = await account.get() 
