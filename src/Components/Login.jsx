@@ -54,7 +54,7 @@ const Login = () => {
             navigate('/')
         } catch (error) {
             console.error('Registration failed:', error.message);
-            alert('Registration failed. Please try again.');
+            alert('Registration failed. Check you credentials.');
         } finally {
             setLoading(false);
         }
